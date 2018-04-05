@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [AVR-programming-cable.PrjPcb]
+   Generated File[AVR-programming-cable.TXT]
+   Generated File[AVR-programming-cable.LDP]
+   Generated File[AVR-programming-cable.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 10:11:26 AM On 4/5/2018
