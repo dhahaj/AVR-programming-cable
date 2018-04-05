@@ -74,7 +74,7 @@
 /* Define this to 1 if the device has its own power supply. Set it to 0 if the
  * device is powered from the USB bus.
  */
-#define USB_CFG_MAX_BUS_POWER           200
+#define USB_CFG_MAX_BUS_POWER           300
 /* Set this variable to the maximum USB bus power consumption of your device.
  * The value is in milliamperes. [It will be divided by two since USB
  * communicates power requirements in units of 2 mA.]
@@ -142,8 +142,8 @@ extern void usbEventResetReady(void);
 #define USB_CFG_DEVICE_VERSION  0x04, 0x01
 /* Version number of the device: Minor number first, then major number.
  */
-#define USB_CFG_VENDOR_NAME     'o', 'b', 'd', 'e', 'v', '.', 'a', 't'
-#define USB_CFG_VENDOR_NAME_LEN 8
+#define USB_CFG_VENDOR_NAME     'd', 'h', 'a', 'h', 'a', 'j'
+#define USB_CFG_VENDOR_NAME_LEN 6
 #undef USB_CFG_VENDOR_NAME
 #undef USB_CFG_VENDOR_NAME_LEN
 /* These two values define the vendor name returned by the USB device. The name
@@ -160,7 +160,7 @@ extern void usbEventResetReady(void);
  * the macros. See the file USBID-License.txt before you assign a name if you
  * use a shared VID/PID.
  */
-#define USB_CFG_SERIAL_NUMBER   '5', '1' , '2' 
+#define USB_CFG_SERIAL_NUMBER   '0', '0' , '1' 
 #define USB_CFG_SERIAL_NUMBER_LEN   3
 /* Same as above for the serial number. If you don't want a serial number,
  * undefine the macros.
@@ -257,13 +257,13 @@ extern void usbEventResetReady(void);
  * which is not fully supported (such as IAR C) or if you use a differnt
  * interrupt than INT0, you may have to define some of these.
  */
-/* #define USB_INTR_CFG            MCUCR */
-/* #define USB_INTR_CFG_SET        ((1 << ISC00) | (1 << ISC01)) */
+// #define USB_INTR_CFG            MCUCR 
+// #define USB_INTR_CFG_SET        ((1 << ISC00) | (1 << ISC01)) 
 /* #define USB_INTR_CFG_CLR        0 */
 /* #define USB_INTR_ENABLE         GIMSK */
-/* #define USB_INTR_ENABLE_BIT     INT0 */
-/* #define USB_INTR_PENDING        GIFR */
-/* #define USB_INTR_PENDING_BIT    INTF0 */
+// #define USB_INTR_ENABLE_BIT     INT0 
+// #define USB_INTR_PENDING        GIFR 
+// #define USB_INTR_PENDING_BIT    INTF0 
 // use PCINT1 instead of INT0
 #define USB_INTR_CFG            PCMSK
 #define USB_INTR_CFG_SET        (1<<USB_CFG_DPLUS_BIT)
@@ -271,7 +271,7 @@ extern void usbEventResetReady(void);
 #define USB_INTR_PENDING_BIT    PCIF
 #define USB_INTR_VECTOR         SIG_PIN_CHANGE
 
-//#define USB_INTR_VECTOR 		INT0_vect
-//#define USB_INTR_VECTOR 		PCINT9_vect
+// #define USB_INTR_VECTOR 		INT0_vect
+// #define USB_INTR_VECTOR 		PCINT9_vect
 
 #endif /* __usbconfig_h_included__ */

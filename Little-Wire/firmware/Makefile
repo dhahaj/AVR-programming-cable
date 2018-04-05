@@ -8,7 +8,7 @@
 # This Revision: $Id: Makefile 692 2008-11-07 15:07:40Z cs $
 
 DEVICE  = attiny85
-F_CPU   = 16000000	# in Hz
+F_CPU   = 16500000	# in Hz
 FUSE_L  = 0xf1
 FUSE_H  = 0xdd
 FUSE_EXT  = 0xfe
